@@ -31,7 +31,7 @@ module Middleman
 
           if options[:build]
             puts "Building locally..."
-            run("middleman build") || exit(1)
+            run("middleman build --no-parallel") || exit(1)
           end
 
           puts "\nReady for deployment to #{environment}: #{server}\n\n"
